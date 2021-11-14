@@ -37,7 +37,7 @@ if (number === 10) {
     якщо в змінну записали стрінгу вивести 2, якщо булеве значення - 3, якщо об'єкт або масив - 4.
 якщо в змінну записали щось інше, спрацьовує else*/
 
-let x = 1;
+let x="123";
 
 if (typeof (x) === 'number' || typeof (x) === 'string' || typeof (x) === 'object' || typeof (x) === 'boolean') {
     if (typeof (x) === 'number') {
