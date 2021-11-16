@@ -621,7 +621,8 @@ let users = [
 document.write("<div class=\"wrap\">");
 for (let user of users){
     document.write("<div class=\"post-card\">");
-    document.write(user.title);
+    document.write(`<h3> ${user.id} - ${user.title} </h3>`);
+    document.write(`<p> ${user.body} </p>`);
     document.write("</div>");
 }
 

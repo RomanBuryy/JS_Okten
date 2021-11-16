@@ -1,0 +1,11 @@
+.wrap {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.post-card {
+    max-width: 200px;
+}
