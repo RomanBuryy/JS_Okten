@@ -48,7 +48,7 @@ function addArrays(arr1, arr2) {
     return emptyArr;
 }
 
-console.log(addArrays([1, 2, 3, 4, 6], [2, 3, 4, 5]));
+console.log(addArrays([1, 2, 3, 4], [2, 3, 4, 5]));
 
 
 
