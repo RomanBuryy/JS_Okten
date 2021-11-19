@@ -25,11 +25,7 @@ console.log(printAdd(1, 10));
 function addArrays(arr1, arr2) {
     let emptyArr = [];
     for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j < arr2.length; j++) {
-            if (i === j) {
-                emptyArr[j] = arr1[i] + arr2[j];
-            }
-        }
+        emptyArr[i] = arr1[i] + arr2[i];
     }
     return emptyArr;
 }
