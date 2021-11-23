@@ -1,18 +1,3 @@
-/*
-
-Всі функції повинні бути описані стрілочним типом!!!!
-
-
-
-
-
-
-
-- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-
-- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.*/
-
-
 //- створити функцію яка обчислює та повертає площу прямокутника висотою
 let rectangleArea = (x, y) => x * y;
 console.log(rectangleArea(5, 6));
@@ -62,11 +47,41 @@ let createLi2 = (textForLi, numberLi) => {
 
 createLi2("list item", 10);
 
+//- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+let createLiForArray = (arr) => {
+    document.write("<ul>");
+    for (let i = 0; i < arr.length; i++) {
+        document.write(`<li>${arr[i]}</li>`);
+    }
+    document.write("</ul>");
+}
+
+createLiForArray(["qwerty", 12, 234, 4234, true, false]);
+
+// - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+
+let users = [
+    {id: 1, name: 'vasya', age: 31},
+    {id: 2, name: 'petya', age: 30},
+    {id: 3, name: 'kolya', age: 29},
+    {id: 4, name: 'olya', age: 28}
+];
 
 
+let printObject = (arr) => {
 
+    for (const arrElement of arr) {
+        document.write("<div>");
+        for (const arrElementKey in arrElement) {
+            document.write(`<span> ${arrElementKey} - ${arrElement[arrElementKey]}, </span>`);
+        }
+        document.write("</div>");
+    }
 
+}
 
+printObject(users);
 
 
 
