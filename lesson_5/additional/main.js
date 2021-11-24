@@ -74,7 +74,7 @@ let zeroToEndArray = (arr) => {
 
 }
 
-console.log(zeroToEndArray([0,0,1,0]));
+console.log(zeroToEndArray([0,1,2,3,4]));
 
 
 
