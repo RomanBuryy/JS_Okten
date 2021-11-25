@@ -90,7 +90,15 @@ console.log(monthDurationFilter(coursesAndDurationArray));
 - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]*/
 
+let cutString = (str, n) => {
+    newArr = [];
+    for (let i = 0; i < str.length; i += 3) {
+        newArr.push(str.substr(i, n))
+    }
+    return newArr.join(",");
+}
 
+console.log(cutString('наслаждение', 3));
 
 
 
