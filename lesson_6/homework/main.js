@@ -35,7 +35,6 @@ let splitString = (str) => str.split(' ');
 
 console.log(splitString(str));
 
-
 /*- Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
     let str = 'Каждый охотник желает знать';
 document.writeln(delete_characters(str, 7)); // Каждый*/
@@ -53,15 +52,15 @@ console.log(insert_dash("HTML JavaScript PHP"));
 
 //- Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
 
-let upperChar = (str) => str.split(' ');
-
+let upperChar = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 console.log(upperChar("dirty string"));
 
-
-
 //- Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
 
+let capitalize = (str) => { return str.split(' ').map(value => value.charAt(0).toUpperCase() + value.slice(1)).join(" ");}
+
+console.log(capitalize("dirty string"));
 
 
 
