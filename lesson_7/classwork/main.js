@@ -21,16 +21,22 @@ function Cars(model, manufacturer, year, maxSpeed, engineCapacity) {
 
 
     this.info = function () {
-        console.log("Модель - " + this.model);
+
+        for (let key in this){
+            console.log(key, this[key]);
+        }
+
+
+       /* console.log("Модель - " + this.model);
         console.log("Виробник - " + this.manufacturer);
         console.log("Рік - " + this.year);
         console.log("Максимальна швидкість - " + this.maxSpeed);
-        console.log("Об'єм двигуна - " + this.engineCapacity);
+        console.log("Об'єм двигуна - " + this.engineCapacity);*/
 
     };
 
     this.increaseMaxSpeed = function (newSpeed) {
-        return this.maxSpeed + newSpeed;
+         return this.maxSpeed = this.maxSpeed + newSpeed;
     };
 
     this.changeYear = function (newValue) {
@@ -77,15 +83,15 @@ class newCars {
     }
 
     info() {
-        console.log("Модель - " + this.model);
-        console.log("Виробник - " + this.manufacturer);
-        console.log("Рік - " + this.year);
-        console.log("Максимальна швидкість - " + this.maxSpeed);
-        console.log("Об'єм двигуна - " + this.engineCapacity);
+
+        for (let key in this){
+            console.log(key , this[key])
+        }
+
     }
 
     increaseMaxSpeed(newSpeed) {
-        return this.maxSpeed + newSpeed;
+        return this.maxSpeed = this.maxSpeed + newSpeed;
     }
 
     changeYear(newValue) {
@@ -95,15 +101,16 @@ class newCars {
     addDriver(driver) {
         this.driver = driver;
     }
-
 }
 
 
-let newCar = new newCars(1, 2, 3, 400, 5);
+let newCar = new newCars("Opel", "GM", 2011, 300, 1.6);
 newCar.drive();
 newCar.info();
-newCar.increaseMaxSpeed(600);
+console.log("-----------------------------------------------------------");
+newCar.increaseMaxSpeed(50);
 newCar.info();
+console.log("-----------------------------------------------------------");
 newCar.changeYear(2021);
 newCar.info();
 newCar.addDriver({"driverName": "Roman", "driverAge": 37});

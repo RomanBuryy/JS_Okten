@@ -28,22 +28,28 @@
 
 
 class User {
-    constructor(id, name, username, email, street, suite, city, zipcode, geo, lat, lng, phone, website, company, companyName, catchPhrase, bs) {
+    constructor(id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName, catchPhrase, bs) {
         this.id = id;
         this.name = name;
         this.username = username;
         this.email = email;
-        this.addrres = {street : street}
-
+        this.addrres = {
+            street: street,
+            suite: suite,
+            city: city,
+            zipcode: zipcode,
+            geo: {lat: lat, lng: lng},
+            phone: phone,
+            website: website
+        };
+        this.company = {name: name, catchPhrase: catchPhrase, bs: bs}
     }
-
 
 
 }
 
+let user = new User(1, 'Leanne Graham', 'Bret', 'Sincere@april.biz', 'doroshenka', 'Apt. 556', 'Gwenborough', '92998-3874', '-37.3159', '-37.3159', '1-770-736-8031 x56442', 'hildegard.org', 'Romaguera-Crona', 'Multi-layered client-server neural-net','harness real-time e-markets');
 
-let user = new User(1, 'Leanne Graham', 'Bret', 'Sincere@april.biz','doroshenka');
-
-console.log(user.addrres);
+console.log(user);
 
 
