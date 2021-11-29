@@ -30,7 +30,7 @@ function Cars(model, manufacturer, year, maxSpeed, engineCapacity) {
     };
 
     this.increaseMaxSpeed = function (newSpeed) {
-        this.maxSpeed = newSpeed;
+        return this.maxSpeed + newSpeed;
     };
 
     this.changeYear = function (newValue) {
@@ -85,24 +85,24 @@ class newCars {
     }
 
     increaseMaxSpeed(newSpeed) {
-        this.maxSpeed = newSpeed;
+        return this.maxSpeed + newSpeed;
     }
 
-    changeYear (newValue){
-        this.year = newValue;
+    changeYear(newValue) {
+        return this.year = newValue;
     }
 
-    addDriver (driver){
+    addDriver(driver) {
         this.driver = driver;
     }
 
 }
 
 
-let newCar = new newCars(1, 2, 3, 4, 5);
+let newCar = new newCars(1, 2, 3, 400, 5);
 newCar.drive();
 newCar.info();
-newCar.increaseMaxSpeed(400);
+newCar.increaseMaxSpeed(600);
 newCar.info();
 newCar.changeYear(2021);
 newCar.info();
@@ -147,9 +147,9 @@ let prince = new Prince("Roman", 37, 45);
 let girls = [girl1, girl2, girl3, girl4, girl5, girl6, girl7, girl8, girl9, girl10];
 
 
-let princessFound = girls.find((girl) => girl.footSize===prince.shoeSize);
+let princessFound = girls.find((girl) => girl.footSize === prince.shoeSize);
 
-if (princessFound){
+if (princessFound) {
     console.log(`We found princes - his name is ${princessFound.name}. She is ${princessFound.age} years old`);
 } else {
     console.log("Sorry, but we didn't find the princess");
