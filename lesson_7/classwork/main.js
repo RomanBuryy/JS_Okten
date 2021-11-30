@@ -23,7 +23,8 @@ function Cars(model, manufacturer, year, maxSpeed, engineCapacity) {
     this.info = function () {
 
         for (let key in this){
-            console.log(key, this[key]);
+            if (typeof this[key] !== 'function'){
+            console.log(key, this[key]);}
         }
 
 
@@ -85,7 +86,8 @@ class newCars {
     info() {
 
         for (let key in this){
-            console.log(key , this[key])
+            if (typeof this[key] !== 'function'){
+            console.log(key , this[key])}
         }
 
     }
