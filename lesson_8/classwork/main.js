@@ -28,7 +28,6 @@ for (const text of listText) {
 }
 
 // e) отримує всі елементи li та змінює ім колір фону на сірий
-
 let allLi = document.getElementsByTagName('li');
 
 for (const allLiElement of allLi) {
@@ -36,47 +35,54 @@ for (const allLiElement of allLi) {
 }
 
 // f) отримує всі елементи 'a' та додає їм клас anchor
+let addClassToLink = document.getElementsByTagName('a');
 
-// let addClassToLink =
-
-
-
-
+for (const addClassToLinkElement of addClassToLink) {
+    addClassToLinkElement.classList.add('anchor');
+}
 
 // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
+let changeText = document.getElementsByTagName('a');
 
-
-
-
-
-
+for (const changeTextElement of changeText) {
+    if (changeTextElement.innerText === 'link3'){
+        changeTextElement.style.fontSize = '40px';
+    }
+}
 
 // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
 
+let addClassWithContent = document.getElementsByTagName('a');
 
-
-
-
+for (const addClassWithContentElement of addClassWithContent) {
+    addClassWithContentElement.classList.add(`element_${addClassWithContentElement.innerText}`);
+}
 
 // i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
 
-
-
-
-
-
-
+// let sub_headers = document.getElementsByClassName('sub-header');
+//
+// for (const subHeader of sub_headers) {
+//     subHeader.style.background = prompt('Enter color: ');
+// }
 
 // j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+let subHeaders = document.getElementsByClassName('sub-header');
 
-
-
-
+for (subHeader of subHeaders){
+    if(subHeader.innerText === 'content 2 segment'){
+        subHeader.style.color = prompt('Enter color for subHeaders ');
+    }
+}
 
 
 // k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
 
+let content_1 = document.getElementsByClassName('content_1');
 
+for (cont of content_1){
+
+}
 
 
 
