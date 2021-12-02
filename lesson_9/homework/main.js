@@ -99,8 +99,6 @@ for (const coursesArrElement of coursesArr) {
     h1.innerText = `${coursesArrElement.title}`;
     p.innerText = `${coursesArrElement.monthDuration}`;
 
-
-
     document.body.appendChild(div);
     div.appendChild(h1);
     div.appendChild(p);
