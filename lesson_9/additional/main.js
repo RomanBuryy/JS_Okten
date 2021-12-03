@@ -280,18 +280,11 @@ for (const user of usersList) {
     let website = createElement();
     website.classList.add('website');
     website.innerText = user.website;
-
-
-
-
-
-    /*  phone: '024-648-3804',
-        website: 'ambrose.net',
-        company: {
-        name: 'Hoeger LLC',
-            catchPhrase: 'Centralized empowering task-force',
-            bs: 'target end-to-end models'
-    }*/
+    let company = createElement();
+    company.classList.add('company');
+    let companyName = createElement();
+    companyName.classList.add('companyName');
+    companyName.innerText = user.company.name;
 
     document.body.appendChild(userDiv);
     userDiv.appendChild(idDiv);
@@ -308,13 +301,7 @@ for (const user of usersList) {
     geo.appendChild(lng);
     userDiv.appendChild(phone);
     userDiv.appendChild(website);
-
-
-
-
-
-
-
-
+    userDiv.appendChild(company);
+    company.appendChild(companyName);
 
 }
