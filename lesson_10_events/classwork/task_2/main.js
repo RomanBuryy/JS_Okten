@@ -1,9 +1,26 @@
-
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
+
+let table = document.createElement('table');
+let f1 = document.forms.form1;
+let btn = document.getElementById('btn');
+document.body.appendChild(table);
+f1.onsubmit = function (e) {
+    e.preventDefault();
+    for (let i = 0; i < f1.rows.value; i++) {
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
+        for (let j = 0; j < f1.td.value; j++) {
+            let td = document.createElement('td');
+            td.innerText = f1.text.value;
+            tr.appendChild(td);
+        }
+    }
+
+}
+
+
 // (Додатковачастина для завдання)
-//
-//
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
