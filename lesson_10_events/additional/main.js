@@ -34,9 +34,45 @@ let cityArr = [];
 //     }
 // }
 
-function events(){
+// function events(){
+//     if (checkedFalse.checked) {
+//         falseArr = usersWithAddress.filter(value => value.status === false);
+//         console.log(falseArr);
+//     }
+//     if(checkedAge.checked) {
+//         ageArr = usersWithAddress.filter(value => value.age>=29);
+//         console.log(ageArr);
+//     }
+// }
+//
 
-}
+document.addEventListener('change', () =>{
+    let events = [...document.querySelectorAll('.checkboxEvent')];
+    let checkedEvents = events.filter(value => value.checked);
+    console.log(checkedEvents);
+    for (const event of checkedEvents) {
+        if(event.id === 'false'){
+            falseArr = usersWithAddress.filter(value => value.status === false);
+            // console.log(falseArr)
+        } else
+        if (event.id === 'age'){
+            falseArr = usersWithAddress.filter(value => value.age>29);
+            // console.log(falseArr)
+        }
+        // console.log(falseArr);
+
+    }
+    console.log(falseArr)
+});
 
 
-checkedFalse.addEventListener('change', checkboxFalse);
+
+
+
+
+
+
+
+
+
+
