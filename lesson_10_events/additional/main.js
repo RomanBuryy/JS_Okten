@@ -20,24 +20,23 @@ let usersWithAddress = [
 
 let checkedFalse = document.getElementById('false');
 let checkedAge = document.getElementById('age');
-let newArr = [];
-function checkboxFalse() {
-    if (checkedFalse.checked) {
-        newArr = usersWithAddress.filter(value => value.status === false);
-        console.log(newArr);
-    } else {
-        console.log(usersWithAddress);
-    }
+let checkedCity = document.getElementById('city');
+let falseArr = [];
+let ageArr = [];
+let cityArr = [];
+
+// function checkboxFalse() {
+//     if (checkedFalse.checked) {
+//         newArr = usersWithAddress.filter(value => value.status === false);
+//         console.log(newArr);
+//     } else {
+//         console.log(usersWithAddress);
+//     }
+// }
+
+function events(){
+
 }
 
-function checkedAgeFunc(){
-    if (checkedAge.checked) {
-        let arr = newArr.filter(value => value.age >=29);
-        console.log(arr);
-    } else if (!checkedAge.checked) {
-        console.log(newArr);
-    }
-}
 
 checkedFalse.addEventListener('change', checkboxFalse);
-checkedAge.addEventListener('change', checkedAgeFunc);
