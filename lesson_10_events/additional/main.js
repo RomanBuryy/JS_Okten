@@ -18,25 +18,23 @@ let usersWithAddress = [
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
 
-let checkedFalse = document.getElementById('false');
-let checkedAge = document.getElementById('age');
-let checkedCity = document.getElementById('city');
-let falseArr = [];
-let ageArr = [];
-let cityArr = [];
 
-// function checkboxFalse() {
-//     if (checkedFalse.checked) {
-//         newArr = usersWithAddress.filter(value => value.status === false);
-//         console.log(newArr);
-//     } else {
-//         console.log(usersWithAddress);
-//     }
-// }
+let filteredArr = usersWithAddress;
+let allCheckBoxes = document.querySelectorAll('.check');
 
-function events(){
-
+let filtArr = () => {
+    allCheckBoxes.forEach((item, key) => {
+        if (item.checked && key===0){
+            filteredArr = filteredArr.filter(value => value.status === false);
+            console.log(filteredArr);
+        } else if(item.checked && key===1){
+            filteredArr = filteredArr.filter(value => value.age>=29);
+            console.log(filteredArr);
+        } else if (item.checked && key===2){
+            filteredArr = filteredArr.filter(value => value.address.city === 'Kyiv');
+            console.log(filteredArr);
+        }
+    } )
 }
 
 
-checkedFalse.addEventListener('change', checkboxFalse);
