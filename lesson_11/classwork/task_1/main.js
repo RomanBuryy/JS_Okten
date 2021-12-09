@@ -17,25 +17,31 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 
+let favouriteUsers = [];
+localStorage.setItem('favUsers', JSON.stringify(favouriteUsers));
+
 for (const user of users) {
+
     let div = document.createElement('div');
     let h2Name = document.createElement('h2');
     let h3Age = document.createElement('h3');
     let h3Status = document.createElement('h3');
+    let btn = document.createElement('button');
 
+    btn.innerText = 'add';
+    btn.setAttribute('id', 'btn');
+    h2Name.innerText = user.name;
+    h3Age.innerText = user.age;
+    h3Status.innerText = user.status;
 
-
-
+    btn.onclick = () => {
+        let data = localStorage.getItem('favUsers');
+        let favUsers = JSON.parse(data);
+        favUsers.push(user);
+        localStorage.setItem('favUsers', JSON.stringify(favUsers));
+        btn.classList.add('hide');
+    }
 
     document.body.appendChild(div);
-    div.append(h2Name, h3Age, h3Status);
-
-
-
-
-
-
-
-
-
+    div.append(h2Name, h3Age, h3Status, btn);
 }
