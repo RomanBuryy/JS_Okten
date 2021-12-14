@@ -52,7 +52,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                                                 let commentDiv = document.createElement('div');
                                                 commentDiv.innerText = comment.name;
                                                 postDiv.append(commentDiv);
-
+                                                commentButton.disabled = true;
                                             }
                                         }
                                     })
