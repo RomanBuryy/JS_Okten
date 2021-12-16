@@ -12,13 +12,90 @@
 // Дочекатись автобус - 3с
 // Пообідати - 1с
 
-function syncFirst () {
-    setTimeout(() => {
-        for (let i=0; i<10; i++){
-            console.log(i);
-        }
-    }, 1000);
+function getUp(){
+   return new Promise((resolve) => {
+       setTimeout(() =>{
+           console.log('Get up');
+           resolve(200);
+       }, 1000);
+   })
 }
 
+function washUp(){
+    return new Promise((resolve) => {
+        setTimeout(()=>{
+            console.log('I wash up');
+            resolve(200);
+        }, 10);
+    })
+}
 
-syncFirst();
+function drinkCoffee() {
+    setTimeout(() =>{
+        console.log('Drink coffee');
+    }, 350);
+}
+
+function dress() {
+    setTimeout(()=>{
+        console.log('Dress');
+    }, 10);
+}
+function driveToWork() {
+    setTimeout(() => {
+        console.log('Drive to work');
+    }, 2000);
+}
+
+function doWork() {
+    setTimeout(()=>{
+        console.log('Work hard');
+    }, 500);
+}
+
+function goHome(){
+    setTimeout(()=>{
+        console.log('Go home');
+    }, 1234);
+}
+
+// getUp();
+// washUp();
+// goHome();
+// doWork();
+// driveToWork();
+// dress();
+// drinkCoffee();
+
+getUp().then(()=>{
+    washUp();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
