@@ -12,18 +12,124 @@
 // Дочекатись автобус - 3с
 // Пообідати - 1с
 
-function getUp(){
-   return new Promise((resolve) => {
-       setTimeout(() =>{
-           console.log('Get up');
-           resolve(200);
-       }, 1000);
-   })
+
+/*==================== Promise ==============================*/
+
+
+// function getUp() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log('Get up');
+//             resolve(200);
+//         }, 1000);
+//     })
+// }
+//
+// function washUp() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log('I wash up');
+//             resolve(200);
+//         }, 10);
+//     })
+// }
+//
+// function drinkCoffee() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log('Drink coffee');
+//             resolve(200);
+//         }, 350);
+//     })
+// }
+//
+// function dress() {
+//     return new Promise((resolve => {
+//         setTimeout(() => {
+//             console.log('Dress');
+//             resolve(200);
+//         }, 10);
+//     }))
+// }
+//
+// function driveToWork() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log('Drive to work');
+//             resolve(200);
+//         }, 2000);
+//     })
+// }
+//
+// function doWork() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log('Work hard');
+//             resolve(200);
+//         }, 500);
+//     })
+// }
+//
+// function goHome() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log('Go home');
+//             resolve(200);
+//         }, 1234);
+//     })
+// }
+//
+//
+// getUp()
+//     .then((response) => {
+//         if (response === 200) {
+//             return washUp();
+//         }
+//     })
+//     .then((response) => {
+//         if (response === 200) {
+//             return drinkCoffee();
+//         }
+//     })
+//     .then((response) => {
+//         if (response === 200) {
+//             return dress();
+//         }
+//     })
+//     .then((response) => {
+//         if (response === 200) {
+//             return driveToWork();
+//         }
+//     })
+//     .then((response) => {
+//         if (response === 200) {
+//             return doWork();
+//         }
+//     })
+//     .then((response) => {
+//             if (response === 200) {
+//                 return goHome();
+//             }
+//         }
+//     );
+
+/*============================== end Promise =======================*/
+
+
+/*============================== async await =========================================== */
+
+function getUp() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('Get up');
+            resolve(200);
+        }, 1000);
+    })
 }
 
-function washUp(){
+function washUp() {
     return new Promise((resolve) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('I wash up');
             resolve(200);
         }, 10);
@@ -31,53 +137,64 @@ function washUp(){
 }
 
 function drinkCoffee() {
-    setTimeout(() =>{
-        console.log('Drink coffee');
-    }, 350);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log('Drink coffee');
+            resolve(200);
+        }, 350);
+    })
 }
 
 function dress() {
-    setTimeout(()=>{
-        console.log('Dress');
-    }, 10);
+    return new Promise((resolve => {
+        setTimeout(() => {
+            console.log('Dress');
+            resolve(200);
+        }, 10);
+    }))
 }
+
 function driveToWork() {
-    setTimeout(() => {
-        console.log('Drive to work');
-    }, 2000);
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('Drive to work');
+            resolve(200);
+        }, 2000);
+    })
 }
 
 function doWork() {
-    setTimeout(()=>{
-        console.log('Work hard');
-    }, 500);
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('Work hard');
+            resolve(200);
+        }, 500);
+    })
 }
 
-function goHome(){
-    setTimeout(()=>{
-        console.log('Go home');
-    }, 1234);
+function goHome() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log('Go home');
+            resolve(200);
+        }, 1234);
+    })
 }
 
-// getUp();
-// washUp();
-// goHome();
-// doWork();
-// driveToWork();
-// dress();
-// drinkCoffee();
+async function myDay() {
+    await getUp();
+    await washUp();
+    await drinkCoffee();
+    await dress();
+    await driveToWork();
+    await doWork();
+    await goHome();
 
-getUp().then(()=>{
-    washUp();
-})
+}
 
+myDay();
 
-
-
-
-
-
-
+/*============================== End async await =========================================== */
 
 
 
