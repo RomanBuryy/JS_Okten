@@ -1,4 +1,3 @@
-//
 // Зробити свій розпорядок дня. //
 // У вас має бути більше 10 асинхронних дій з рандомними затримками.
 // Вам необхідно синхронізувати всі свої дії
@@ -14,201 +13,83 @@
 
 
 /*==================== Promise ==============================*/
-
-
-// function getUp() {
-//     return new Promise((resolve) => {
-//         setTimeout(() => {
-//             console.log('Get up');
-//             resolve(200);
-//         }, 1000);
-//     })
-// }
-//
-// function washUp() {
-//     return new Promise((resolve) => {
-//         setTimeout(() => {
-//             console.log('I wash up');
-//             resolve(200);
-//         }, 10);
-//     })
-// }
-//
-// function drinkCoffee() {
-//     return new Promise((resolve) => {
-//         setTimeout(() => {
-//             console.log('Drink coffee');
-//             resolve(200);
-//         }, 350);
-//     })
-// }
-//
-// function dress() {
-//     return new Promise((resolve => {
-//         setTimeout(() => {
-//             console.log('Dress');
-//             resolve(200);
-//         }, 10);
-//     }))
-// }
-//
-// function driveToWork() {
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//             console.log('Drive to work');
-//             resolve(200);
-//         }, 2000);
-//     })
-// }
-//
-// function doWork() {
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//             console.log('Work hard');
-//             resolve(200);
-//         }, 500);
-//     })
-// }
-//
-// function goHome() {
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//             console.log('Go home');
-//             resolve(200);
-//         }, 1234);
-//     })
-// }
-//
-//
-// getUp()
-//     .then((response) => {
-//         if (response === 200) {
-//             return washUp();
-//         }
-//     })
-//     .then((response) => {
-//         if (response === 200) {
-//             return drinkCoffee();
-//         }
-//     })
-//     .then((response) => {
-//         if (response === 200) {
-//             return dress();
-//         }
-//     })
-//     .then((response) => {
-//         if (response === 200) {
-//             return driveToWork();
-//         }
-//     })
-//     .then((response) => {
-//         if (response === 200) {
-//             return doWork();
-//         }
-//     })
-//     .then((response) => {
-//             if (response === 200) {
-//                 return goHome();
-//             }
-//         }
-//     );
-
-/*============================== end Promise =======================*/
-
-
-/*============================== async await =========================================== */
-
-function getUp() {
-    return new Promise((resolve) => {
+function getUp(alarmClock = true) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('Get up');
-            resolve(200);
-        }, 1000);
+            if (alarmClock) {
+                resolve('I am wake up');
+            }
+            reject('I am late');
+
+        }, 3000);
     })
 }
 
-function washUp() {
-    return new Promise((resolve) => {
+function washUp(isThereHotWater) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('I wash up');
-            resolve(200);
-        }, 10);
+            if (isThereHotWater) {
+                resolve('I am wash up')
+            }
+            reject('There is no water');
+
+        }, 10)
     })
 }
 
-function drinkCoffee() {
-    return new Promise((resolve) => {
+function drinkCoffee(doIHaveCoffee) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('Drink coffee');
-            resolve(200);
-        }, 350);
+            if (doIHaveCoffee) {
+                resolve('I am drinking coffee');
+            }
+            reject('I dont have coffee');
+        }, 200)
+
     })
 }
 
-function dress() {
-    return new Promise((resolve => {
+function dress(coffeeCup) {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('Dress');
-            resolve(200);
-        }, 10);
-    }))
-}
-
-function driveToWork() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            console.log('Drive to work');
-            resolve(200);
+            if (coffeeCup === 'I am drinking coffee') {
+                resolve('Dress');
+            }
+            reject('Iam naked');
         }, 2000);
     })
+
 }
 
-function doWork() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            console.log('Work hard');
-            resolve(200);
-        }, 500);
-    })
-}
+//
+// getUp(true).then((wake) => {
+//     console.log(wake);
+//     return washUp(true);
+// }).then((hotWater)=>{
+//     console.log(hotWater);
+//     return drinkCoffee(true);
+// }).then((coffee)=>{
+//     console.log(coffee)
+//     return dress(ee);
+// }).catch(reason => {
+//     console.log('Error:', reason);
+// })
+/*============================== end Promise ========================*/
 
-function goHome() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            console.log('Go home');
-            resolve(200);
-        }, 1234);
-    })
-}
+/*============================== async await ========================*/
 
 async function myDay() {
-    await getUp();
-    await washUp();
-    await drinkCoffee();
-    await dress();
-    await driveToWork();
-    await doWork();
-    await goHome();
-
+    const up = await getUp(true);
+    const wash = await washUp(true);
+    const drink = await drinkCoffee(true);
+    const closes = await dress(drink);
+    console.log(up);
+    console.log(wash);
+    console.log(drink);
+    console.log(closes);
 }
 
 myDay();
-
-/*============================== End async await =========================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
