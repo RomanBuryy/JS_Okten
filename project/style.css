@@ -20,8 +20,8 @@ body{
     width: 33%;
     height: 500px;
     background-color: #ffffff;
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.24);
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24);
     border-radius: 4px;
     box-sizing: border-box;
     padding: 46px;
