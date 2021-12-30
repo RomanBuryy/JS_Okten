@@ -1,0 +1,39 @@
+body {
+    background: rgb(123, 112, 211);
+    background: linear-gradient(-45deg, rgba(123, 112, 211, 1) 0%, rgba(201, 145, 207, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 85px 80px;
+}
+
+.userHeader {
+    display: flex;
+}
+
+.userInfo {
+    margin-left: 20px;
+}
+
+img {
+    width: 220px;
+    height: 220px;
+}
+
+.userName {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #4F606E;
+}
+
