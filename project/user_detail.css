@@ -37,3 +37,41 @@ img {
     color: #4F606E;
 }
 
+.login, .email, .phone, .website{
+    display: flex;
+    margin-top: 22px;
+}
+
+.user_key{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
+    color: #A7A7A7;
+}
+
+.user_value{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 22px;
+    color: #7B70D3;
+
+}
+
+.m53{
+    margin-left: 53px;
+}
+
+.m90{
+    margin-left: 90px;
+}
+
+.m110{
+    margin-left: 110px;
+}
+
+.m120{
+    margin-left: 120px;
+}
+
+
+
