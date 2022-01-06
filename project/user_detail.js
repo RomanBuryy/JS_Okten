@@ -80,38 +80,20 @@ userInfo.append(website);
 website.append(websiteText);
 website.append(websiteValue);
 
-
-
-
-
-
-
-
-
-
-
-let addressBlock = document.createElement('div');
-addressBlock.classList.add('addressBlock');
+let address = document.createElement('div');
+address.classList.add('address');
 let addressHeader = document.createElement('div');
-addressHeader.classList.add('header');
+addressHeader.classList.add('address_header');
 addressHeader.innerText = 'Address';
 
-
-
-
-
-let streetLine = document.createElement('div');
-
-
-
-
-
-let geoLine = document.createElement('div');
-
-
-
-
-let companyLine = document.createElement('div');
+let addressStreet = document.createElement('div');
+addressStreet.classList.add('street');
+let streetKey = document.createElement('div');
+let streetVal = document.createElement('div');
+streetKey.innerText = 'Street';
+streetKey.classList.add('user_key');
+streetVal.innerText = userDetail.address.street;
+streetVal.classList.add('user_value', 'm120');
 
 
 
@@ -124,5 +106,6 @@ let companyLine = document.createElement('div');
 
 
 
-wrapDiv.append(addressBlock);
-addressBlock.append(addressHeader, streetLine, geoLine, companyLine);
+wrapDiv.append(address);
+address.append(addressHeader, addressStreet);
+addressStreet.append(streetKey, streetVal);

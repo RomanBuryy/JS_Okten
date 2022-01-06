@@ -37,7 +37,7 @@ img {
     color: #4F606E;
 }
 
-.login, .email, .phone, .website {
+.login, .email, .phone, .website, .street {
     display: flex;
     margin-top: 22px;
 }
@@ -57,11 +57,11 @@ img {
 
 }
 
-.addressBlock{
+.address{
     margin-top: 48px;
 }
 
-.header{
+.address_header{
     font-weight: 600;
     font-size: 26px;
     color: #4F606E;
