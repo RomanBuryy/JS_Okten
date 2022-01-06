@@ -28,18 +28,17 @@ loginText.innerText = 'User Name:';
 loginText.classList.add('user_key');
 
 let userValue = document.createElement('div');
-userValue.classList.add('user_value','m53');
+userValue.classList.add('user_value', 'm53');
 userValue.innerText = userDetail.username;
 
-let email= document.createElement('div');
+let email = document.createElement('div');
 email.classList.add('email');
 let emailText = document.createElement('div');
 emailText.innerText = 'Email:';
 emailText.classList.add('user_key');
 let emailValue = document.createElement('div');
 emailValue.innerText = userDetail.email;
-emailValue.classList.add('user_value',  'm120');
-
+emailValue.classList.add('user_value', 'm120');
 
 
 let phone = document.createElement('div');
@@ -51,7 +50,6 @@ phoneText.classList.add('user_key');
 phoneValue.innerText = userDetail.phone;
 phoneValue.classList.add('user_value', 'm110');
 
-
 let website = document.createElement('div');
 website.classList.add('website');
 let websiteText = document.createElement('div');
@@ -60,7 +58,6 @@ websiteText.innerText = 'Website:';
 websiteText.classList.add('user_key');
 websiteValue.innerText = userDetail.website;
 websiteValue.classList.add('user_value', 'm90');
-
 
 wrapDiv.append(userHeader);
 userHeader.append(userImage);
@@ -75,7 +72,6 @@ email.append(emailText);
 email.append(emailValue);
 
 
-
 userInfo.append(phone);
 phone.append(phoneText);
 phone.append(phoneValue);
@@ -83,3 +79,50 @@ phone.append(phoneValue);
 userInfo.append(website);
 website.append(websiteText);
 website.append(websiteValue);
+
+
+
+
+
+
+
+
+
+
+
+let addressBlock = document.createElement('div');
+addressBlock.classList.add('addressBlock');
+let addressHeader = document.createElement('div');
+addressHeader.classList.add('header');
+addressHeader.innerText = 'Address';
+
+
+
+
+
+let streetLine = document.createElement('div');
+
+
+
+
+
+let geoLine = document.createElement('div');
+
+
+
+
+let companyLine = document.createElement('div');
+
+
+
+
+
+
+
+
+
+
+
+
+wrapDiv.append(addressBlock);
+addressBlock.append(addressHeader, streetLine, geoLine, companyLine);

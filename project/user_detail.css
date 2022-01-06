@@ -37,19 +37,19 @@ img {
     color: #4F606E;
 }
 
-.login, .email, .phone, .website{
+.login, .email, .phone, .website {
     display: flex;
     margin-top: 22px;
 }
 
-.user_key{
+.user_key {
     font-weight: 500;
     font-size: 24px;
     line-height: 22px;
     color: #A7A7A7;
 }
 
-.user_value{
+.user_value {
     font-weight: 500;
     font-size: 24px;
     line-height: 22px;
@@ -57,19 +57,30 @@ img {
 
 }
 
-.m53{
+.addressBlock{
+    margin-top: 48px;
+}
+
+.header{
+    font-weight: 600;
+    font-size: 26px;
+    color: #4F606E;
+}
+
+
+.m53 {
     margin-left: 53px;
 }
 
-.m90{
+.m90 {
     margin-left: 90px;
 }
 
-.m110{
+.m110 {
     margin-left: 110px;
 }
 
-.m120{
+.m120 {
     margin-left: 120px;
 }
 
