@@ -37,7 +37,7 @@ img {
     color: #4F606E;
 }
 
-.login, .email, .phone, .website, .street {
+.login, .email, .phone, .website, .street, .suite, .city, .lat {
     display: flex;
     margin-top: 22px;
 }
@@ -57,7 +57,7 @@ img {
 
 }
 
-.address{
+.address, .geo{
     margin-top: 48px;
 }
 
@@ -76,12 +76,28 @@ img {
     margin-left: 90px;
 }
 
+.m96 {
+    margin-left: 96px;
+}
+
 .m110 {
     margin-left: 110px;
 }
 
 .m120 {
     margin-left: 120px;
+}
+
+.m133 {
+    margin-left: 133px;
+}
+
+.m146 {
+    margin-left: 146px;
+}
+
+.m165 {
+    margin-left: 165px;
 }
 
 

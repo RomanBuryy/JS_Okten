@@ -95,17 +95,81 @@ streetKey.classList.add('user_key');
 streetVal.innerText = userDetail.address.street;
 streetVal.classList.add('user_value', 'm120');
 
+let addressSuite = document.createElement('div');
+addressSuite.classList.add('suite');
+let suiteKey = document.createElement('div');
+let suiteVal = document.createElement('div');
+suiteKey.innerText = 'Suite';
+suiteKey.classList.add('user_key');
+suiteVal.innerText = userDetail.address.suite;
+suiteVal.classList.add('user_value', 'm133');
+
+let addressCity = document.createElement('div');
+addressCity.classList.add('city');
+let cityKey = document.createElement('div');
+let cityVal = document.createElement('div');
+cityKey.innerText = 'City';
+cityKey.classList.add('user_key');
+cityVal.innerText = userDetail.address.city;
+cityVal.classList.add('user_value', 'm146');
+
+let addressZipcode = document.createElement('div');
+addressZipcode.classList.add('city');
+let zipcodeKey = document.createElement('div');
+let zipcodeVal = document.createElement('div');
+zipcodeKey.innerText = 'Zipcode';
+zipcodeKey.classList.add('user_key');
+zipcodeVal.innerText = userDetail.address.zipcode;
+zipcodeVal.classList.add('user_value', 'm96');
 
 
+let geo = document.createElement('div');
+geo.classList.add('geo');
+let geoHeader = document.createElement('div');
+geoHeader.classList.add('address_header');
+geoHeader.innerText = 'Geo';
 
 
+let geoLat = document.createElement('div');
+geoLat.classList.add('lat');
+let geoKey = document.createElement('div');
+let geoVal = document.createElement('div');
+geoKey.innerText = 'lat';
+geoKey.classList.add('user_key');
+geoVal.innerText = userDetail.address.geo.lat;
+geoVal.classList.add('user_value', 'm165');
 
 
+let geoLng = document.createElement('div');
+geoLng.classList.add('lng');
+let geoLngKey = document.createElement('div');
+let geoLngVal = document.createElement('div');
+geoLngKey.innerText = 'lng';
+geoLngKey.classList.add('user_key');
+geoLngVal.innerText = userDetail.address.geo.lng;
+geoLngVal.classList.add('user_value', 'm165');
 
 
+let company = document.createElement('div');
+company.classList.add('company');
+let companyHeader = document.createElement('div');
+companyHeader.classList.add('address_header');
+companyHeader.innerText = 'Geo';
 
 
 
 wrapDiv.append(address);
-address.append(addressHeader, addressStreet);
+wrapDiv.append(geo);
+wrapDiv.append(company);
+address.append(addressHeader, addressStreet, addressSuite, addressCity, addressZipcode);
 addressStreet.append(streetKey, streetVal);
+addressSuite.append(suiteKey, suiteVal);
+addressCity.append(cityKey, cityVal);
+addressZipcode.append(zipcodeKey, zipcodeVal);
+geo.append(geoHeader)
+geo.append(geoLat);
+geo.append(geoLng);
+geoLat.append(geoKey, geoVal);
+geoLng.append(geoLngKey, geoLngVal);
+
+
