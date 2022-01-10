@@ -230,23 +230,16 @@ postBtn.onclick = () => {
                 userPostId.innerHTML = `<p class="post_number">Post #${post.id}</p>`;
                 userPostTitle.innerHTML = `<p class="post_title"><a href="post-details.html"> ${post.title}</a></p>`;
 
-                localStorage.setItem('post', JSON.stringify(post));
+                userPostTitle.onclick = () => {
 
-
-
+                    localStorage.setItem('post', JSON.stringify(post));
+                }
 
                 postBtn.classList.add('disable');
-                // let commentButton = document.createElement('button');
-                // commentButton.innerText = 'comments';
-
-
 
                 wrapDiv.append(userPostDiv);
                 userPostDiv.append(userPostId);
                 userPostDiv.append(userPostTitle);
-                // userPostDiv.append(commentButton);
-
-
 
 
 

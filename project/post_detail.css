@@ -1,0 +1,30 @@
+body {
+    background: rgb(123, 112, 211);
+    background: linear-gradient(-45deg, rgba(123, 112, 211, 1) 0%, rgba(201, 145, 207, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    color: #7B70D3;
+    font-weight: 500;
+}
+
+.wrap {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 55px 50px;
+}
+
+div {
+    margin-top: 26px;
+}
+
+div span {
+    color: #A7A7A7;
+    font-weight: 600;
+}
