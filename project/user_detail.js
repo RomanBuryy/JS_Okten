@@ -154,8 +154,37 @@ let company = document.createElement('div');
 company.classList.add('company');
 let companyHeader = document.createElement('div');
 companyHeader.classList.add('address_header');
-companyHeader.innerText = 'Geo';
+companyHeader.innerText = 'Company';
 
+
+let companyName = document.createElement('div');
+companyName.classList.add('lng');
+let companyNameKey = document.createElement('div');
+let companyNameVal = document.createElement('div');
+companyNameKey.innerText = 'Name';
+companyNameKey.classList.add('user_key');
+companyNameVal.innerText = userDetail.company.name;
+companyNameVal.classList.add('user_value', 'm129');
+
+
+let companyCatchPhrase = document.createElement('div');
+companyCatchPhrase.classList.add('lng');
+let companyCatchPhraseKey = document.createElement('div');
+let companyCatchPhraseVal = document.createElement('div');
+companyCatchPhraseKey.innerText = 'CatchPhrasee';
+companyCatchPhraseKey.classList.add('user_key');
+companyCatchPhraseVal.innerText = userDetail.company.catchPhrase;
+companyCatchPhraseVal.classList.add('user_value', 'm33');
+
+
+let companyBs = document.createElement('div');
+companyBs.classList.add('lng');
+let companyBsKey = document.createElement('div');
+let companyBsVal = document.createElement('div');
+companyBsKey.innerText = 'Bs';
+companyBsKey.classList.add('user_key');
+companyBsVal.innerText = userDetail.company.bs;
+companyBsVal.classList.add('user_value', 'm174');
 
 
 wrapDiv.append(address);
@@ -171,5 +200,67 @@ geo.append(geoLat);
 geo.append(geoLng);
 geoLat.append(geoKey, geoVal);
 geoLng.append(geoLngKey, geoLngVal);
+company.append(companyHeader);
+company.append(companyName);
+companyName.append(companyNameKey, companyNameVal);
+company.append(companyCatchPhrase);
+companyCatchPhrase.append(companyCatchPhraseKey, companyCatchPhraseVal);
+company.append(companyBs);
+companyBs.append(companyBsKey, companyBsVal);
+
+
+let postBtnDiv = document.createElement('div');
+postBtnDiv.classList.add('postBtnDiv');
+let postBtn = document.createElement('a');
+postBtn.innerText = 'Post of current user';
+postBtn.classList.add('btn');
+wrapDiv.append(postBtnDiv);
+postBtnDiv.append(postBtn);
+
+postBtn.onclick = () => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${userDetail.id}/posts`)
+        .then((response) => response.json())
+        .then((posts) => {
+            for (const post of posts) {
+                //console.log(post);
+                let userPostDiv = document.createElement('div');
+                let userPostId = document.createElement('div');
+                let userPostTitle = document.createElement('div');
+                userPostDiv.classList.add('userPostDiv');
+                userPostId.innerHTML = `<p class="post_number">Post #${post.id}</p>`;
+                userPostTitle.innerHTML = `<p class="post_title"><a href="post-details.html"> ${post.title}</a></p>`;
+
+                localStorage.setItem('post', JSON.stringify(post));
+
+
+
+
+                postBtn.classList.add('disable');
+                // let commentButton = document.createElement('button');
+                // commentButton.innerText = 'comments';
+
+
+
+                wrapDiv.append(userPostDiv);
+                userPostDiv.append(userPostId);
+                userPostDiv.append(userPostTitle);
+                // userPostDiv.append(commentButton);
+
+
+
+
+
+            }
+        })
+}
+
+
+
+
+
+
+
+
+
 
 

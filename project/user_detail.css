@@ -7,7 +7,7 @@ body {
 }
 
 .wrap {
-    width: 1200px;
+    width: 1000px;
     margin: 0 auto;
     background-color: #ffffff;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24);
@@ -37,7 +37,7 @@ img {
     color: #4F606E;
 }
 
-.login, .email, .phone, .website, .street, .suite, .city, .lat {
+.login, .email, .phone, .website, .street, .suite, .city, .lat, .lng, .CatchPhrasee {
     display: flex;
     margin-top: 22px;
 }
@@ -57,7 +57,7 @@ img {
 
 }
 
-.address, .geo{
+.address, .geo, .company{
     margin-top: 48px;
 }
 
@@ -67,6 +67,9 @@ img {
     color: #4F606E;
 }
 
+.m33 {
+    margin-left: 33px;
+}
 
 .m53 {
     margin-left: 53px;
@@ -88,6 +91,10 @@ img {
     margin-left: 120px;
 }
 
+.m129 {
+    margin-left: 129px;
+}
+
 .m133 {
     margin-left: 133px;
 }
@@ -99,6 +106,62 @@ img {
 .m165 {
     margin-left: 165px;
 }
+
+.m174 {
+    margin-left: 174px;
+}
+
+
+.postBtnDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.btn {
+    width: 280px;
+    height: 60px;
+    background-color: #7B70D3;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #574F90;
+}
+
+.disable{
+    display: none;
+}
+
+.userPostDiv{
+    display: flex;
+    align-items: center;
+}
+
+.post_number {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #A7A7A7;
+}
+
+.post_title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #7B70D3;
+    margin-left: 20px;
+}
+
 
 
 
