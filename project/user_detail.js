@@ -241,8 +241,6 @@ postBtn.onclick = () => {
                 userPostDiv.append(userPostId);
                 userPostDiv.append(userPostTitle);
 
-
-
             }
         })
 }
